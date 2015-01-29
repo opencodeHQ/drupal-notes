@@ -13,6 +13,11 @@ $databases['default']['default'] = array(
   'prefix' => '',
 );
 
+// When using Drush Runserver (see http://drushcommands.com/drush-6x/runserver/runserver)
+$base_url = 'http://127.0.0.1:8888';
+$conf['drupal_http_request_fails'] = FALSE;
+ini_set('memory_limit', '128M');
+
 // Turn on all error reporting for local development.
 error_reporting(-1);
 $conf['error_level'] = 2;
